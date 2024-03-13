@@ -32,3 +32,31 @@ const PORT = process.env.PORT || 3000;
 httpServer.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
 });
+
+
+
+// const WebSocket = require('ws');
+// import WebSocket from 'ws'; // use wss for secured option
+// let WebSocket;
+// import('ws').then(ws => {
+//     WebSocket = ws.default;
+
+//     const server = new WebSocket.Server({ port: 3000 });
+
+//     server.on('connection', (socket) => {
+//         console.log('User connected');
+
+//         // Handle socket connection
+//         socket.on('message', (message) => {
+//             server.clients.forEach((client) => {
+//                 if (client.readyState === WebSocket.OPEN) {
+//                     client.send(message);
+//                 }
+//             });
+//         });
+
+//         socket.on('close', () => {
+//             console.log('User disconnected');
+//         });
+//     });
+// });
